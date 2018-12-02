@@ -1,0 +1,1 @@
+insert into discount_bean(id, start_date, end_date, display_name, description, type, amount) values (1, '01/01/2018', '12/31/2018', 'iru_offer', 'Promotion for IRU users', 'iru', 100);
