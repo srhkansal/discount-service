@@ -39,9 +39,4 @@ public class DiscountController {
         DiscountBean discountBean =  discountService.createDiscount(pricingBean);
         return discountBean;
     }
-
-    @DeleteMapping("/discount-service/discounts/{id}")
-    public void deleteDiscount(@PathVariable Long id){
-        discountService.deleteDiscount(id);
-    }
-}
+  }

@@ -40,7 +40,7 @@ public class DiscountControllerTest {
     @Before
     public void init(){
         MockitoAnnotations.initMocks(this);
-    }
+    } 
 
     @Test
     public void testFindById() throws Exception{ 
@@ -97,14 +97,6 @@ public class DiscountControllerTest {
                 .content(json)).andExpect(status().isOk());
 
         verify(discountService, times(1)).createDiscount(any(DiscountBean.class));
-        verifyNoMoreInteractions(discountService);
-    }
-
-    @Test
-    public void testDeleteDiscount() throws Exception{
-        this.mockMvc.perform(delete("/discount-service/discounts/{id}", 1L)).andExpect(status().isOk());
-
-        verify(discountService, times(1)).deleteDiscount(1L);
         verifyNoMoreInteractions(discountService);
     }
 
