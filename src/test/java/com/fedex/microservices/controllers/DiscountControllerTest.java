@@ -25,11 +25,12 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
-@WebMvcTest(DiscountController.class)
+@WebMvcTest(DiscountController.class) //To test Spring MVC Controllers @WebMvcTest annotation is used.
 public class DiscountControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
+    //MockMvc is the helper class which provides syntax to call controller classes as HTTP requests.
 
     @Autowired
     private ObjectMapper mapper;
